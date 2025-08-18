@@ -15,13 +15,8 @@ export const eventConfig = {
   tracks: ["Cyber Security, EdTech, Industrial, Smart Tools, Environment"],
   register: {
     // TODO: Replace with your actual Google Form links
-    embedUrl: "https://docs.google.com/forms/d/e/EXAMPLE/viewform?embedded=true",
-    shareUrl: "https://forms.gle/EXAMPLE",
-  },
-  submit: {
-    // TODO: Replace with your actual Google Form links for project submission
-    embedUrl: "https://docs.google.com/forms/d/e/EXAMPLE_SUBMIT/viewform?embedded=true",
-    shareUrl: "https://forms.gle/EXAMPLE_SUBMIT",
+    embedUrl: "https://forms.gle/BdMUEYzDJomSVM7y8",
+    shareUrl: "https://forms.gle/BdMUEYzDJomSVM7y8",
   },
   socials: {
     instagram: "https://www.instagram.com/ietudaipur?igsh=cXBpZzh4dXdicmdk", // update later
