@@ -13,7 +13,7 @@ export default function AboutUs() {
     <section id="team" className="mx-auto max-w-6xl px-4 py-12">
       <SectionHeader
         title="About Us"
-        subtitle="Jinhone yeh site banayi hai — team se milo!"
+        subtitle="Bina caffeine ke bhi kaam karne wale — team se milo!"
         align="left"
       />
 

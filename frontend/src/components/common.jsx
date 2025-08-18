@@ -166,26 +166,34 @@ export function Countdown({ targetIso, registrationDeadlineIso, endIso }) {
   }
 
   return (
-    <div className="w-full">
-      <p className="text-cyan-300 text-sm uppercase tracking-wider mb-3">{headline}</p>
-      {now < end ? (
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-2 md:gap-4">
-          {[
-            { label: "Days", value: time.days },
-            { label: "Hours", value: time.hours },
-            { label: "Minutes", value: time.mins },
-            { label: "Seconds", value: time.secs },
-          ].map((t) => (
-            <Card key={t.label} className="bg-white/5 border-white/10">
-              <CardContent className="p-4 md:p-5 text-center">
-                <div className="text-2xl md:text-3xl font-semibold text-white tabular-nums">{String(t.value).padStart(2, "0")}</div>
-                <div className="text-xs uppercase tracking-wider text-slate-300 mt-1">{t.label}</div>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
-      ) : null}
+<div className="w-full flex flex-col items-center">
+  <p className="text-cyan-300 text-sm uppercase tracking-wider mb-3 text-center">
+    {headline}
+  </p>
+  {now < end && (
+    <div className="w-full flex justify-center">
+  <div className="grid grid-cols-4 gap-2 md:gap-4 max-w-4xl w-full px-4">
+        {[
+          { label: "Days", value: time.days },
+          { label: "Hours", value: time.hours },
+          { label: "Minutes", value: time.mins },
+          { label: "Seconds", value: time.secs },
+        ].map((t) => (
+          <Card key={t.label} className="bg-white/5 border border-white/10">
+            <CardContent className="p-3 md:p-4 text-center">
+              <div className="text-xl md:text-2xl font-semibold text-white tabular-nums">
+                {String(t.value).padStart(2, "0")}
+              </div>
+              <div className="text-[10px] xs:text-xs uppercase tracking-wider text-slate-300 mt-1">
+                {t.label}
+              </div>
+            </CardContent>
+          </Card>
+        ))}
+      </div>
     </div>
+  )}
+</div>
   );
 }
 
@@ -193,36 +201,56 @@ export function Countdown({ targetIso, registrationDeadlineIso, endIso }) {
 export function StatCard({ icon = "Trophy", label, value }) {
   const Icon = IconMap[icon] || Trophy;
   return (
-    <Card className="bg-white/5 border-white/10 hover:bg-white/10 transition-colors">
-      <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-        <CardTitle className="text-sm font-medium text-slate-300">{label}</CardTitle>
-        <Icon size={16} className="text-cyan-300" />
-      </CardHeader>
-      <CardContent>
-        <div className="text-2xl font-semibold text-white">{value}</div>
-      </CardContent>
-    </Card>
+   <Card className="bg-white/5 border-white/10 hover:bg-white/10 transition-colors">
+  <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+    <CardTitle className="text-sm font-medium text-slate-300">
+      {label}
+    </CardTitle>
+    <Icon size={18} className="text-cyan-300" />
+  </CardHeader>
+  <CardContent>
+    <div className="text-lg font-semibold text-white leading-snug">
+      {value}
+    </div>
+  </CardContent>
+</Card>
   );
 }
 
 // Timeline (simple vertical)
-export function Timeline({ items }) {
+export function Timeline({ items, showDots = true }) {
   return (
     <div className="relative pl-6">
+      {/* vertical line */}
       <div className="absolute left-2 top-0 bottom-0 w-px bg-white/10" />
-      <ul className="space-y-6">
+      <ul className="space-y-8">
         {items.map((it, idx) => (
           <li key={idx} className="relative">
-            <span className="absolute -left-[7px] mt-1 h-3 w-3 rounded-full bg-cyan-400 shadow-[0_0_8px_1px_rgba(34,211,238,0.6)]" />
-            <div className="text-slate-400 text-xs">{it.time}</div>
-            <div className="text-white font-medium">{it.title}</div>
-            <div className="text-slate-300 text-sm">{it.description}</div>
+            {showDots && (
+              <span className="absolute -left-[7px] mt-1 h-3 w-3 rounded-full bg-cyan-400 shadow-[0_0_8px_1px_rgba(34,211,238,0.6)]" />
+            )}
+
+            {/* Time */}
+            <div className="text-xs text-slate-400 tracking-wide mb-1">
+              {it.time}
+            </div>
+
+            {/* Title */}
+            <div className="text-lg font-semibold text-white leading-snug">
+              {it.title}
+            </div>
+
+            {/* Description */}
+            <div className="text-sm text-slate-300 mt-1 leading-relaxed">
+              {it.description}
+            </div>
           </li>
         ))}
       </ul>
     </div>
   );
 }
+
 
 // FAQ using shadcn Accordion
 export function FAQAccordion({ items }) {
@@ -239,26 +267,28 @@ export function FAQAccordion({ items }) {
 }
 
 // Promise list — inspired by AWAL's style
-export function PromiseList() {
-  const points = [
-    "Follow your vision",
-    "You own your IP",
-    "Transparent judging",
-    "No long-term lock-ins",
-    "Mentors on-site",
-    "You have final say",
+export function JudgingCriteria() {
+  const criteria = [
+    "Innovation and Creativity (20%)",
+    "Technical Implementation (20%)",
+    "Functionality & Stability (20%)",
+    "User Interface & Experience (15%)",
+    "Presentation and Communication (15%)",
+    "Real-World Impact (10%) [Extra]"
   ];
+
   return (
-    <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2 mt-6">
-      {points.map((p) => (
-        <li key={p} className="flex items-center gap-2 text-slate-300">
-          <CheckCircle2 size={16} className="text-cyan-300" />
-          <span className="text-sm">{p}</span>
+    <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-6">
+      {criteria.map((c) => (
+        <li key={c} className="flex items-center gap-2 text-slate-300">
+          <CheckCircle2 size={18} className="text-purple-400" />
+          <span className="text-base font-medium">{c}</span>
         </li>
       ))}
     </ul>
   );
 }
+
 
 // Google Form embed with graceful fallback
 export function FormEmbed({ title, embedUrl, shareUrl }) {
