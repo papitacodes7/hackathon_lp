@@ -446,46 +446,19 @@ export function DetailsPage() {
 
 // Register / Submit Page
 export function RegisterPage() {
-  const [mode, setMode] = useState("register");
-  const active =
-    mode === "register" ? eventConfig.register : eventConfig.submit;
+  const active = eventConfig.register; // Only use registration config
 
   return (
     <div className="min-h-screen bg-slate-950 text-slate-100">
       <Navbar />
       <main className="mx-auto max-w-5xl px-4 py-12">
         <SectionHeader
-          title="Register & Submit"
-          subtitle="Use the toggle to switch between forms."
+          title="Register"
+          subtitle="Fill out the form below to register."
         />
 
-        <div className="mb-6 inline-flex rounded-full border border-white/10 bg-white/5 p-1">
-          <Button
-            onClick={() => setMode("register")}
-            className={`rounded-full px-5 ${
-              mode === "register"
-                ? "bg-cyan-500 text-slate-900"
-                : "bg-transparent hover:bg-white/10 text-slate-200"
-            }`}>
-            Register
-          </Button>
-          <Button
-            onClick={() => setMode("submit")}
-            className={`rounded-full px-5 ml-2 ${
-              mode === "submit"
-                ? "bg-cyan-500 text-slate-900"
-                : "bg-transparent hover:bg-white/10 text-slate-200"
-            }`}>
-            Submit Project
-          </Button>
-        </div>
-
         <FormEmbed
-          title={
-            mode === "register"
-              ? "Registration Form"
-              : "Project Submission Form"
-          }
+          title="Registration Form"
           embedUrl={active.embedUrl}
           shareUrl={active.shareUrl}
         />
@@ -494,6 +467,7 @@ export function RegisterPage() {
     </div>
   );
 }
+
 
 // 404 Page
 export function NotFoundPage() {
