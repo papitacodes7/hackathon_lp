@@ -5,10 +5,10 @@ import { Card, CardContent, CardHeader, CardTitle } from "../components/ui/card"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "../components/ui/accordion";
 import { Separator } from "../components/ui/separator";
 import { eventConfig } from "../config/event";
-import { Trophy, Users, Timer, Menu, X, CheckCircle2 } from "lucide-react";
+import { Trophy, Users, Timer, Menu, X, CheckCircle2, BadgeIndianRupee } from "lucide-react";
 
 // Small icon map for StatCard (lucide-react only)
-const IconMap = { Trophy, Users, Timer };
+const IconMap = { Trophy, Users, BadgeIndianRupee, Timer };
 
 // Navbar (sticky, responsive)
 export function Navbar() {
@@ -86,13 +86,30 @@ export function Footer() {
 
 // Section Header
 export function SectionHeader({ title, subtitle, align = "center" }) {
+  const isLeft = align === "left";
+
   return (
-    <div className={`mb-8 ${align === "left" ? "text-left" : "text-center"}`}>
-      <h2 className="display-title text-2xl md:text-3xl font-semibold text-white tracking-tight">{title}</h2>
-      {subtitle && <p className="mt-2 text-slate-300 max-w-3xl mx-auto">{subtitle}</p>}
+    <div className={`mb-8 ${isLeft ? "text-left" : "text-center"}`}>
+      <h2
+        className={`display-title text-2xl md:text-3xl font-semibold text-white tracking-tight ${
+          isLeft ? "" : "mx-auto"
+        }`}
+      >
+        {title}
+      </h2>
+      {subtitle && (
+        <p
+          className={`mt-2 text-slate-300 max-w-3xl ${
+            isLeft ? "" : "mx-auto"
+          }`}
+        >
+          {subtitle}
+        </p>
+      )}
     </div>
   );
 }
+
 
 // Scroll-reveal util (Apple-like smoothness without heavy animations)
 export function Reveal({ as: Comp = "div", children, className = "", delay = 0 }) {

@@ -1,7 +1,13 @@
 import React from "react";
 import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { HomePage, AboutPage, DetailsPage, RegisterPage, NotFoundPage } from "./pages/pages";
+import {
+  HomePage,
+  AboutPage,
+  DetailsPage,
+  RegisterPage,
+  NotFoundPage,
+} from "./pages/pages";
 
 // NOTE: Frontend-first (mock) build. No backend dependency required for core UI.
 // We keep backend connectivity intact via /api prefix if needed later.

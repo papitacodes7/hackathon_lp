@@ -39,8 +39,7 @@ function AppleHelloVietnameseEffect({
       initial={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 0.5 }}
-      {...props}
-    >
+      {...props}>
       <title>xin chào</title>
 
       {/* x1 */}
@@ -206,8 +205,7 @@ function AppleHelloEnglishEffect({
       initial={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 0.5 }}
-      {...props}
-    >
+      {...props}>
       <title>hello</title>
 
       {/* h1 */}
