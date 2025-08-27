@@ -5,11 +5,11 @@ export const eventConfig = {
   name: "HacknRoll",
   org: "Institute of Engineering and Technology, MLSU, in collaboration with the Department of Computer Science, Vigyan Bhawan (Block A), MLSU",
   city: "Udaipur, Rajasthan",
-  startDateTimeIST: "2025-09-15T09:00:00+05:30",
-  endDateTimeIST: "2025-09-15T17:00:00+05:30",
+  startDateTimeIST: "2025-09-18T09:00:00+05:30",
+  endDateTimeIST: "2025-09-18T17:00:00+05:30",
   registrationDeadlineIST: "2025-09-02T23:59:59+05:30",
-  registrationDeadline: "Last Date of Registration is 02/09/2025",
-  venueDetails: "Vigyan Bhawan Auditorium, Block-A",
+  registrationDeadline: "Last Date of Registration is '02/09/2025' ",
+  venueDetails: "BCA Auditorium, Block-A",
   prizePool: "A Participation Certificate will be awarded to all attendees.",
 
   teamSize: "6 members",
@@ -29,7 +29,7 @@ export const eventConfig = {
   seo: {
     title: "HacknRoll — IET, MLSU Hackathon",
     description:
-      "Build. Ship. Celebrate. Join HackanRoll at IET, MLSU — fast-paced hacking, real impact, and big vibes.",
+      "Build. Ship. Celebrate. Join HackanRoll at MLSU — fast-paced hacking, real impact, and big vibes.",
     ogImage: "/og.png",
   },
   theme: {

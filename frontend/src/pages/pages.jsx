@@ -101,20 +101,6 @@ function ProblemStatements() {
       color: "from-red-500 to-orange-500",
     },
     {
-      category: "Space Technology",
-      description:
-        "Develop applications related to space exploration, satellite technology, or astronomical research.",
-      icon: Rocket,
-      color: "from-purple-500 to-pink-500",
-    },
-    {
-      category: "Fitness & Sports",
-      description:
-        "Create technologies to enhance athletic performance, training methods, or fan engagement.",
-      icon: Dumbbell,
-      color: "from-rose-500 to-red-500",
-    },
-    {
       category: "Medtech/Biotech/Healthtech",
       description:
         "Innovate in healthcare with solutions for diagnosis, treatment, or patient care.",
@@ -157,13 +143,6 @@ function ProblemStatements() {
       color: "from-teal-500 to-cyan-500",
     },
     {
-      category: "Toys And Games",
-      description:
-        "Innovate in entertainment with educational toys, games, or interactive experiences.",
-      icon: Gamepad2,
-      color: "from-fuchsia-500 to-purple-500",
-    },
-    {
       category: "Miscellaneous",
       description:
         "Any innovative idea that doesn't fit into the above categories but has real-world impact.",
@@ -185,7 +164,7 @@ function ProblemStatements() {
         <div className="text-center mb-16">
           <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight mb-6">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-500">
-              Problem Statements
+              Problem Statements Theme
             </span>
           </h2>
           <p className="text-slate-300 max-w-3xl mx-auto text-lg md:text-xl leading-relaxed">
@@ -200,7 +179,7 @@ function ProblemStatements() {
         </div>
 
         {/* Problem Statement Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
           {problemStatements.map((ps, index) => {
             const Icon = ps.icon;
             return (
@@ -229,28 +208,38 @@ function ProblemStatements() {
       </div>
 
       {/* Action Buttons */}
-      <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
-        {/* Register Button */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 w-full max-w-3xl mx-auto text-center px-4">
+        {" "}
+        {/* Register Button */}{" "}
         <a
           href={register.shareUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="group relative px-8 py-4 rounded-xl font-semibold text-white bg-gradient-to-r from-cyan-500 to-blue-600 
-    shadow-lg hover:shadow-cyan-500/30 transition-all duration-300 hover:-translate-y-1 flex items-center gap-2">
-          <span>Register Now</span>
-          <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
-        </a>
-
-        {/* Submit Project Button */}
+          className="group relative px-8 py-4 rounded-2xl font-semibold text-white bg-gradient-to-r from-cyan-500 to-blue-600 shadow-lg hover:shadow-cyan-500/40 transition-all duration-300 hover:-translate-y-1 flex items-center justify-center gap-2">
+          {" "}
+          <span>Register Now</span>{" "}
+          <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />{" "}
+        </a>{" "}
+        {/* Submit Project Button */}{" "}
         <a
-          href="https://forms.gle/YOUR_SUBMISSION_FORM" // 🔗 replace with real submission form link
+          href={NotFoundPage()}
           target="_blank"
           rel="noopener noreferrer"
-          className="group relative px-8 py-4 rounded-xl font-semibold text-white bg-gradient-to-r from-purple-500 to-pink-500 
-    shadow-lg hover:shadow-pink-500/30 transition-all duration-300 hover:-translate-y-1 flex items-center gap-2">
-          <span>Submit Project</span>
-          <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
-        </a>
+          className="group relative px-8 py-4 rounded-2xl font-semibold text-white bg-gradient-to-r from-purple-500 to-pink-500 shadow-lg hover:shadow-pink-500/40 transition-all duration-300 hover:-translate-y-1 cursor-not-allowed flex items-center justify-center gap-2">
+          {" "}
+          <span>Submit Project</span>{" "}
+          <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />{" "}
+        </a>{" "}
+        {/* Problem Statement Button (Centered on small screens) */}{" "}
+        <a
+          href="https://sih.gov.in/sih2025PS"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="group relative px-8 py-4 rounded-2xl font-semibold text-white bg-gradient-to-r from-orange-500 to-pink-600 shadow-lg hover:shadow-orange-500/40 transition-all duration-300 hover:-translate-y-1 flex items-center justify-center gap-2 sm:col-span-2 sm:justify-self-center">
+          {" "}
+          <span>View Problem Statements</span>{" "}
+          <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />{" "}
+        </a>{" "}
       </div>
     </section>
   );
@@ -527,7 +516,7 @@ export function HomePage() {
         {/* Team Section */}
         <Reveal>
           <section className="mx-auto max-w-6xl px-4 py-16">
-            <div className="mb-10 text-center">
+            <div className="mb-4 text-center">
               <h2 className="text-4xl md:text-4xl lg:text-5xl font-extrabold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 via-purple-500 to-pink-500 drop-shadow-lg">
                 Our Team
               </h2>

@@ -57,7 +57,7 @@ export const stats = [
   },
   {
     label: "Entry Fees",
-    value: "₹250",
+    value: "₹250 Per Team",
     icon: "BadgeIndianRupee",
   },
 ];
@@ -81,7 +81,7 @@ export const team = [
   },
   {
     name: "Arvind Purohit",
-    role: "Volunteer",
+    role: "Volunteer (BCA)",
     avatar: TheArvind,
     linkedin:
       "https://www.linkedin.com/in/arvind-purohit-140858373?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
@@ -89,7 +89,7 @@ export const team = [
   },
   {
     name: "Aditya Prajapat",
-    role: "Tech Support",
+    role: "Volunteer (BCA)",
     avatar: AdityaP,
     linkedin: "http://www.linkedin.com/in/aadi-prajapat",
     phone: "+91 7424993312",

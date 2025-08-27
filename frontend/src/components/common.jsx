@@ -69,20 +69,44 @@ export function Navbar() {
 // Footer
 export function Footer() {
   return (
-    <footer className="border-t border-white/10 bg-slate-950 text-slate-300">
-      <div className="mx-auto max-w-6xl px-4 py-10 flex flex-col md:flex-row items-center justify-between gap-4">
-        <p className="text-sm">© 2025 {eventConfig.name} · IET, MLSU · Udaipur</p>
-        <div className="flex items-center gap-3 text-sm">
-          <a href={eventConfig.socials.instagram || "#"} className="hover:text-white">Instagram</a>
+    <footer className="border-t border-white/10 bg-slate-950 text-slate-400">
+      <div className="mx-auto max-w-6xl px-6 py-8 flex flex-col md:flex-row items-center justify-between gap-6">
+        
+        {/* Left Section */}
+        <p className="text-xs sm:text-sm text-center md:text-left leading-relaxed">
+          © 2025 <span className="font-semibold text-slate-200">{eventConfig.name}</span> · 
+          Made with <span className="text-pink-500">❤️</span> by 
+          <span className="font-medium text-slate-200"> Institute of Engineering And Technology, MLSU</span> · Udaipur
+        </p>
+
+        {/* Right Section - Socials */}
+        <div className="flex items-center gap-4 text-sm">
+          <a 
+            href={eventConfig.socials.instagram || "#"} 
+            className="hover:text-white transition-colors duration-200 hover:underline underline-offset-4"
+          >
+            Instagram
+          </a>
           <Separator orientation="vertical" className="h-4 bg-white/20" />
-          <a href={eventConfig.socials.linkedin || "#"} className="hover:text-white">LinkedIn</a>
+          <a 
+            href={eventConfig.socials.linkedin || "#"} 
+            className="hover:text-white transition-colors duration-200 hover:underline underline-offset-4"
+          >
+            LinkedIn
+          </a>
           <Separator orientation="vertical" className="h-4 bg-white/20" />
-          <a href={`mailto:${eventConfig.socials.email}`} className="hover:text-white">Email</a>
+          <a 
+            href={`mailto:${eventConfig.socials.email}`} 
+            className="hover:text-white transition-colors duration-200 hover:underline underline-offset-4"
+          >
+            Email
+          </a>
         </div>
       </div>
     </footer>
   );
 }
+
 
 // Section Header
 export function SectionHeader({ title, subtitle, align = "center" }) {
