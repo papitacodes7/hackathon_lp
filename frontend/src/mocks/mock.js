@@ -4,6 +4,7 @@ import AdityaP from "../assets/AdityaP.jpg"
 import TheArvind from "../assets/WhatsApp Image 2025-08-26 at 09.48.59_6b58cd22.jpg"
 import Abhijeet from "../assets/WhatsApp Image 2025-08-29 at 08.53.17_5b932e87.jpg"
 import Dikshita from "../assets/WhatsApp Image 2025-08-29 at 08.55.07_c4db95bc.jpg"
+import afifa from "../assets/WhatsApp Image 2025-08-27 at 11.25.04_628b5797.jpg"
 
 
 export const schedule = [
@@ -109,6 +110,13 @@ export const team = [
     avatar: Dikshita,
     linkedin: "https://www.linkedin.com/in/dikshita-salvi-843a8b35b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
     phone: "+91 9352166115",
+  },
+  {
+    name: "Afifa Rizvi",
+    role: "Volunteer (Msc IT)",
+    avatar: afifa,
+    linkedin: "afifaa.0502@gmail.com",
+    phone: "+91 8233445215",
   },
 ];
 
