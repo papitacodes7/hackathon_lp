@@ -2,6 +2,8 @@ import Piyush from "../assets/Piyush.jpg";
 import Shubham from "../assets/Shubham.jpg";
 import AdityaP from "../assets/AdityaP.jpg"
 import TheArvind from "../assets/WhatsApp Image 2025-08-26 at 09.48.59_6b58cd22.jpg"
+import Abhijeet from "../assets/WhatsApp Image 2025-08-29 at 08.53.17_5b932e87.jpg"
+import Dikshita from "../assets/WhatsApp Image 2025-08-29 at 08.55.07_c4db95bc.jpg"
 
 
 export const schedule = [
@@ -93,6 +95,20 @@ export const team = [
     avatar: AdityaP,
     linkedin: "http://www.linkedin.com/in/aadi-prajapat",
     phone: "+91 7424993312",
+  },
+  {
+    name: "Abhijeet Singh Rathore",
+    role: "Volunteer (BCA)",
+    avatar: Abhijeet,
+    linkedin: "https://www.linkedin.com/in/abhijeet-singh-rathore-96a934371?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+    phone: "+91 6375495984",
+  },
+  {
+    name: "Dikshita Salvi",
+    role: "Volunteer (BCA)",
+    avatar: Dikshita,
+    linkedin: "https://www.linkedin.com/in/dikshita-salvi-843a8b35b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+    phone: "+91 9352166115",
   },
 ];
 
