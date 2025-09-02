@@ -698,6 +698,11 @@ export function AboutPage() {
                 <li>Shubham Shrivastav (B.Tech CSE) – 8955992262</li>
                 <li>Arvind Purohit (BCA) – 7738841613</li>
                 <li>Aditya Prajapat (B.Tech CSE) – 7424993312</li>
+                <li>Shubhi Vijayvargiya (B. Tech CSE) - 7014099785</li>
+                <li>Abhijeet Singh Rathore (BCA) - 6375495984</li>
+                <li>Dikshita Salvi (BCA) - 9352166115</li>
+                <li>Afifa Rizvi (Msc IT) - 8233445215</li>
+                <li>Smriti Sharma (MCA)</li>
                 </ul>
               </div>
             </div>
@@ -849,6 +854,11 @@ export function DetailsPage() {
                 <li>Shubham Shrivastav (B.Tech CSE) – 8955992262</li>
                 <li>Arvind Purohit (BCA) – 7738841613</li>
                 <li>Aditya Prajapat (B.Tech CSE) – 7424993312</li>
+                <li>Shubhi Vijayvargiya (B. Tech CSE) - 7014099785</li>
+                <li>Abhijeet Singh Rathore (BCA) - 6375495984</li>
+                <li>Dikshita Salvi (BCA) - 9352166115</li>
+                <li>Afifa Rizvi (Msc IT) - 8233445215</li>
+                <li>Smriti Sharma (MCA)</li>
               </ul>
             </div>
           </div>
