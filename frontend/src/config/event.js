@@ -7,8 +7,8 @@ export const eventConfig = {
   city: "Udaipur, Rajasthan",
   startDateTimeIST: "2025-09-18T09:00:00+05:30",
   endDateTimeIST: "2025-09-18T17:00:00+05:30",
-  registrationDeadlineIST: "2025-09-02T23:59:59+05:30",
-  registrationDeadline: "Last Date of Registration is '02/09/2025' ",
+  registrationDeadlineIST: "2025-09-05T23:59:59+05:30",
+  registrationDeadline: "Last Date of Registration is extended to '05/09/2025' ",
   venueDetails: "BCA Auditorium, Block-A",
   prizePool: "A Participation Certificate will be awarded to all attendees.",
 

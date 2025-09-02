@@ -5,6 +5,7 @@ import TheArvind from "../assets/WhatsApp Image 2025-08-26 at 09.48.59_6b58cd22.
 import Abhijeet from "../assets/WhatsApp Image 2025-08-29 at 08.53.17_5b932e87.jpg"
 import Dikshita from "../assets/WhatsApp Image 2025-08-29 at 08.55.07_c4db95bc.jpg"
 import afifa from "../assets/WhatsApp Image 2025-08-27 at 11.25.04_628b5797.jpg"
+import subhi from "../assets/Shubhi.jpg"
 
 
 export const schedule = [
@@ -117,6 +118,13 @@ export const team = [
     avatar: afifa,
     linkedin: "afifaa.0502@gmail.com",
     phone: "+91 8233445215",
+  },
+  {
+    name: "Shubhi Vijayvargiya",
+    role: "Volunteer (B.Tech CSE)",
+    avatar: subhi,
+    linkedin: "https://www.linkedin.com/in/shubhi-vijayvergiya?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+    phone: "+91 7014099785",
   },
 ];
 
